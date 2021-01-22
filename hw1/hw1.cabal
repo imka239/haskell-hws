@@ -1,0 +1,37 @@
+name:                hw1
+version:             0.0.0.0
+synopsis:            hw1
+description:    Please see the README on GitHub at <https://github.com/githubuser/fpHw1#readme>
+
+homepage:            https://github.com/githubuser/fpHw1#readme
+bug-reports:         https://github.com/githubuser/fpHw1/issues
+license:             BSD3
+license-file:        LICENSE
+author:              Dmitriy Gnatyuk
+maintainer:          ima2ima3go9@gmail.com
+copyright:           2020 Dmitriy Gnatyuk
+
+category:            Func
+build-type:          Simple
+cabal-version:       >=1.10
+tested-with:         GHC == 8.6.5
+
+extra-source-files:
+    README.md
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Block1.Task1 Block1.Task2 Block1.Task3 Block2.Task2 Block3.Task1 Block3.Task2
+  default-extensions:  InstanceSigs
+  build-depends:       base >= 4.9 && < 5
+  default-language:    Haskell2010
+
+test-suite hw1-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Main.hs
+  other-modules:       Task1Test, Task2Test, Task3Test, Task4Test
+                       Task5Test, Task6Test, Task7Test
+  default-extensions:  InstanceSigs
+  build-depends:       base, hw1, hspec, tasty-hspec, HUnit, tasty, hedgehog, tasty-hedgehog
+  default-language:    Haskell2010
